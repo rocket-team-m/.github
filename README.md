@@ -25,16 +25,19 @@ flowchart LR
 
 ## Репозитории
 
+Восемь публичных репозиториев и один приватный — RocketCraft.
+
 | Репозиторий | Что внутри |
 |---|---|
+| [.github](https://github.com/rocket-team-m/.github) | этот профиль: README, логотип, лицензии |
 | [potok-m](https://github.com/rocket-team-m/potok-m) | документация, ADR, общие решения, сайт |
 | [potok-m-ai](https://github.com/rocket-team-m/potok-m-ai) | обучение моделей, дистилляция, калибровка, A/B |
 | [potok-m-edge](https://github.com/rocket-team-m/potok-m-edge) | бортовой инференс на Raspberry Pi |
 | [potok-m-sim](https://github.com/rocket-team-m/potok-m-sim) | 6-DoF симулятор, генератор данных, OR-parity |
 | [potok-m-protocol](https://github.com/rocket-team-m/potok-m-protocol) | UART-протокол, генератор биндингов |
 | [potok-m-firmware](https://github.com/rocket-team-m/potok-m-firmware) | STM32H743, Rust/Embassy, безопасность |
-| [potok-m-3d](https://github.com/rocket-team-m/potok-m-3d) | 3D/CAD-модель, STEP/STL, аэродинамические входы |
-| potok-m-workbench | приватный инженерный воркбенч, пока без кода |
+| [potok-m-3d](https://github.com/rocket-team-m/potok-m-3d) | текстовые входы CAD, STEP/STL в Releases, аэродинамика |
+| RocketCraft (`potok-m-workbench`) | приватный инженерный воркбенч: CAD/CFD/FEA/GUI |
 
 ## Принципы
 
@@ -42,10 +45,14 @@ flowchart LR
 - Каждое число в отчёте имеет config, seed, дату и воспроизводимый прогон.
 - Результат не подгоняется под желаемый вывод: красный тест остаётся красным.
 - Тяжёлые данные генерируются и проверяются quality gates, а не лежат в git.
-- Проприетарные SDK и код Dassault/Ansys не используются; собственный код GPL-3.0-or-later, third-party лицензии сохраняются.
+- Проприетарные SDK и код Dassault/Ansys не используются.
 
 ## Документация и статус
 
 Сайт: [rocket-team-m.github.io/potok-m](https://rocket-team-m.github.io/potok-m/)
 
-Логотип: `docs/logo.svg`, растровая версия `docs/logo.png`. Стиль — opencode.ai: near-black `#0c0c0c`, акцент `#6b8fff`, моно-индексы, тонкая сетка.
+Логотип: `docs/logo.svg`, растровая версия `docs/logo.png`. Палитра: near-black `#0c0c0c`, акцент `#6b8fff`; моно-индексы, тонкая сетка.
+
+## Лицензия
+
+Собственный код: GPL-3.0-or-later; коммерческая лицензия доступна отдельно (`LICENSE-COMMERCIAL.md`). Third-party компоненты сохраняют свои лицензии.
